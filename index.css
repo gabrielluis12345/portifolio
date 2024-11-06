@@ -1,0 +1,385 @@
+
+/* Estilo geral*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(17, 67, 202);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+ button:hover,form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px rgb(17, 66, 202);
+    transform: scale(1.05);
+}
+h2.titulo{
+    color: white;
+    font-size: 32px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: rgb(17, 67, 202);
+}
+
+
+/* Estilo do cabeçalho*/
+
+
+header{
+    padding: 40px, 4%;
+}
+
+header >.interface{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+header a{
+    color: rgb(95, 95, 95);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+header nav.menu-desktop a:hover{
+    color: white;
+    transform: scale(1.05);
+}
+header nav ul{
+    list-style-type: none;
+}
+header nav.menu-desktop ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+/* estilo menu mobile */
+.btn-abrir i{
+    color: blue;
+    font-size: 40px;
+}
+.menu-mobile{
+    background-color: rgb(14, 14, 14);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrie-menu{
+   width: 70%;
+}
+.menu-mobile.abrie-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .bt-fechar{
+    padding: 20px 5%;
+}
+.menu-mobile .bt-fechar i{
+    color: blue;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+.menu-mobile nav ul li a{
+     color: #ffff;
+     font-size: 20px;
+     font-weight: 300;
+     padding: 20px 8%;
+     display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: rgb(0, 68, 255);
+    color: black;
+}
+.overlay-menu{
+    background-color: rgba(0, 0, 0, 0.712);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+}
+
+/* estilo do topo do site */
+section .topo-do-site{
+    padding: 40 4%;
+}
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+.topo-do-site .txt-topo-site h1{
+    color: #ffff;
+    font-size: 42px;
+    line-height: 40px;
+}
+.topo-do-site .txt-topo-site h1 span{
+    color: rgb(17, 66, 202);
+}
+.topo-do-site .txt-topo-site p{
+    color: #ffff;
+    margin: 40px 0px;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+/* ESTILO DAS ESPECIALIDADES */
+section .especialidades{
+    padding: 40px 4%;
+}
+section.especialidades .flex{
+   gap: 60px;
+}
+.especialidades .especialidade-box{
+    color: #ffff;
+    padding: 40px;
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: 0.9s;
+}
+.especialidades .especialidade-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff81;
+}
+.especialidades .especialidade-box i{
+    color: rgb(17, 66, 202);
+    font-size: 65px;
+}
+.especialidades .especialidade-box h3{
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+/* sessao sobre */
+section.sobre{
+    padding: 80px 4%;
+}
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+.sobre .txt-sobre{
+    color: #ffff;
+}
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.sobre .txt-sobre h2 span{
+    color: rgb(17, 66, 202);
+    display: block;
+}
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+.social-sobre button{
+   width: 60px;
+   height: 60px;
+   border-radius: 30px;
+   border: 0;
+   background-color:rgb(0, 60, 255);
+   font-size: 22px;
+   cursor: pointer;
+   margin: 0 5px;
+   transition: .2s;
+}
+/* estilo portifolio */
+section.portifolio{
+    padding: 80px 4%;
+    box-shadow: 0px 0px 40px 10px #ffffff15;
+
+}
+section.portifolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    border-radius: 40px;
+    cursor: pointer;
+    position: relative;
+}
+.img-port:hover{
+    background-position: 100% 100%;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.726);
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffff;
+    opacity: 0;
+    transition: .5s;
+}
+.overlay:hover{
+    opacity: 1;
+}
+/* contato fim */
+ 
+section.contact{
+  padding: 80px 4%;
+}
+form{
+    max-width: 500px;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+form input, form textarea{
+    width: 100%;
+    background-color: rgba(53, 52, 52, 0.74);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #ffff;
+    font-size: 18px;
+}
+form textarea{
+    resize: none;
+    max-height: 500px;
+}
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+form .btn-enviar input{
+    width: 120px;
+    background-color: rgb(0, 26, 255);
+    color: #ffff;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .2s;
+}
+/* estiloo do rodape */
+footer{
+    padding: 40px 4%;
+    box-shadow: 0px 0px 40px 10px #ffffff15;
+
+}
+footer .flex{
+    justify-content:space-between;
+}
+footer .line-footer{
+    padding: 20px 0;
+}
+.borda{
+    border-top: 2px solid blue;
+}
+footer .line-footer p i{
+    color: rgb(0, 38, 255);
+    font-size: 22px;
+}
+footer .line-footer p a{
+    color: #ffff;
+}
+@media screen and (max-width: 1020px) {
+     /* casses gerais */
+     .flex{
+        flex-direction: column ;
+     }
+     .topo-do-site .flex{
+        flex-direction: column-reverse;
+     }
+     h2.titulo{
+        font-size: 28px;
+        line-height: 30px;
+     }
+
+    /* cabeçalho */
+
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+    /* topo do site */
+
+    section.topo-do-site .flex{
+        gap: 40px;
+    }
+    section .topo-do-site{
+        padding: 20 8%;
+    }
+    .topo-do-site h1{
+        font-size: 30px;
+    }
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+    }
+    /* especialiadade */
+
+    section.especialidades{
+        padding: 40px 8%;
+    }
+    /* meu portifolio */
+    section.portifolio{
+        padding:80px 10%;
+    } 
+    /* rodape */
+    footer .flex{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .line-footer{
+        text-align: center;
+    }
+}
